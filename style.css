@@ -4,13 +4,66 @@
   box-sizing: border-box;
 }
 
+html {
+  /* variáveis */
+  --bg-color: #EDF2FF;
+  --text-color: #00082f;
+  --primary-color: #4263eb;
+  --primary-color-dark:#364fc7; 
+}
+
+
+.container2 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  margin-right: 25px;
+  
+}
+
+.container2.active {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  margin-right: 25px;
+  --bg-color:#00082f;
+  --text-color:#ffffff;
+ 
+}
+
+.btn {
+  width: 120px;
+  height: 50px;
+  border: 5px solid #ffffff;
+  border-radius: 60px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+ 
+  
+}
+
+.btn:before {
+  content:'';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 62%;
+  transform: translateY(-50%);
+  
+}
+
 a {
   text-decoration: none;
   
 }
 
 body {
-  background: #EDF2FF;
+  background: var(--bg-color);
+  color: var(--text-color);
   font-family: 'Roboto', sans-serif;
 }
 
@@ -19,6 +72,8 @@ body {
   text-align: center;
   list-style: none;
   margin: 60px auto;
+
+  
 }
 
 img {
@@ -35,7 +90,6 @@ img.avatar {
 
 h1 {
   font-size: 32px;
-  color: #00082f;
   margin-top: 24px;
   margin-bottom: 8px;
 }
@@ -44,7 +98,6 @@ h1 {
 .username {
 font-family: 'Roboto Mono', monospace;
 font-weight: 400;
-color: #00082f;
 opacity: 0.8;
 font-size: 18px;
 }
@@ -78,7 +131,6 @@ ul li a:hover {
 footer {
   font-weight: 500;
   font-size: 12px;
-  color: #00082f;
   opacity: 0.6;
   transition: opacity 400ms;
 }
